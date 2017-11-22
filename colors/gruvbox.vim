@@ -328,6 +328,16 @@ if exists('g:gruvbox_color_column')
   let s:color_column = get(s:gb, g:gruvbox_color_column)
 endif
 
+let s:folded = s:bg1
+if exists('g:gruvbox_folded')
+  let s:folded = get(s:gb, g:gruvbox_folded)
+endif
+
+let s:fold_column = s:bg1
+if exists('g:gruvbox_fold_column')
+  let s:fold_column = get(s:gb, g:gruvbox_fold_column)
+endif
+
 let s:vert_split = s:bg0
 if exists('g:gruvbox_vert_split')
   let s:vert_split = get(s:gb, g:gruvbox_vert_split)
@@ -547,9 +557,9 @@ call s:HL('LineNr', s:bg4, s:number_column)
 call s:HL('SignColumn', s:none, s:sign_column)
 
 " Line used for closed folds
-call s:HL('Folded', s:gray, s:bg1, s:italic)
+call s:HL('Folded', s:gray, s:folded, s:italic)
 " Column where folds are displayed
-call s:HL('FoldColumn', s:gray, s:bg1)
+call s:HL('FoldColumn', s:gray, s:fold_column)
 
 " }}}
 " Cursor: {{{
