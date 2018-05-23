@@ -1012,6 +1012,7 @@ hi! link clojureUnquote GruvboxYellow
 " C: {{{
 
 hi! link cOperator GruvboxPurple
+hi! link cppOperator GruvboxPurple
 hi! link cStructure GruvboxOrange
 
 " }}}
